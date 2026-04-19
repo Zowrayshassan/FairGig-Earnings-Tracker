@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FairGig | Income Analytics Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Noto+Sans+Arabic:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#9ef3d6",
+                    "primary-container": "#006b54",
+                    "on-error": "#ffffff",
+                    "on-surface": "#181d1b",
+                    "surface-variant": "#dfe3e1",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#016b54",
+                    "background": "#f6faf7",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#eef2ef",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#b1ccc5",
+                    "surface-container-low": "#f0f5f2",
+                    "surface-container-highest": "#dfe3e1",
+                    "surface-container": "#ebefec",
+                    "tertiary-fixed": "#ffdcbe",
+                    "outline": "#6f7a74",
+                    "on-secondary-container": "#4e6862",
+                    "on-tertiary-fixed": "#2d1600",
+                    "on-secondary-fixed": "#06201b",
+                    "on-tertiary-container": "#ffd0a4",
+                    "inverse-surface": "#2d3130",
+                    "primary-fixed-dim": "#82d7ba",
+                    "on-tertiary-fixed-variant": "#6a3c00",
+                    "on-primary-fixed-variant": "#00513f",
+                    "secondary": "#4a635d",
+                    "outline-variant": "#bec9c3",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "primary": "#00513f",
+                    "tertiary": "#6a3c00",
+                    "on-secondary-fixed-variant": "#334b46",
+                    "inverse-primary": "#82d7ba",
+                    "tertiary-fixed-dim": "#ffb871",
+                    "on-primary-container": "#94e8cb",
+                    "tertiary-container": "#8b5000",
+                    "secondary-container": "#cae6de",
+                    "on-surface-variant": "#3e4944",
+                    "on-background": "#181d1b",
+                    "surface-dim": "#d7dbd8",
+                    "on-primary-fixed": "#002118",
+                    "secondary-fixed": "#cde8e1",
+                    "surface": "#f6faf7",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e5e9e6",
+                    "surface-bright": "#f6faf7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"],
+                    "arabic": ["Noto Sans Arabic"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .animate-spring:active {
+            transform: scale(0.95);
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .glass-header {
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-[#f6faf7]/70 dark:bg-emerald-950/70 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-3 mx-auto w-full max-w-7xl">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-extrabold text-emerald-900 dark:text-emerald-50 font-['Plus_Jakarta_Sans'] tracking-tight">FairGig</span>
+<div class="hidden md:flex gap-6 ml-8">
+<a class="text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 transition-colors px-3 py-1 rounded-lg" href="#">Dashboard</a>
+<a class="text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-700 font-bold px-3 py-1" href="#">Earnings Ledger</a>
+<a class="text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 transition-colors px-3 py-1 rounded-lg" href="#">Community</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex bg-surface-container-low px-4 py-1.5 rounded-full items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Search entries..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-emerald-50 rounded-full transition-colors"><span class="material-symbols-outlined text-emerald-900">notifications</span></button>
+<button class="p-2 hover:bg-emerald-50 rounded-full transition-colors"><span class="material-symbols-outlined text-emerald-900">settings</span></button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-primary-container">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional worker with a friendly expression in natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9DhxJ8WDtE_mNNe7R5_C2oO_PPoNCzrLG2kTo3T2AHQDLpYo2lsPPsqU-xomoiAsZg8Mk4v1WZ6ngPL2qPYqshktW5VLY19Im84f8Ws8MMwy0MBFVwbeJJboOpR7C85QaVznts3Io5V5HXnuqh-wjeXJa4EdH6brbNHEbetBAC3dTXTySss-yJzAgBbPvCUkJjAPXlTeEWPH1Q6smvHa3qEwV4abUGRRmOYowTm2GwDAnAy6jQC4LzxHB2eSYV37X1Yd0_lCcHnDv"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="flex max-w-7xl mx-auto min-h-screen">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 hidden lg:flex flex-col bg-white dark:bg-emerald-950 py-8 gap-4 border-r border-emerald-50/10 z-40">
+<div class="px-8 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+<div>
+<h2 class="font-headline font-bold text-emerald-900 leading-tight">Worker Portal</h2>
+<p class="text-xs text-emerald-800/60">The Ethical Ledger</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-1 px-4">
+<a class="flex items-center gap-4 px-4 py-3 text-emerald-800/70 hover:bg-emerald-50/50 transition-all group" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 bg-emerald-50 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-50 font-semibold rounded-r-full group translate-x-1 duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span class="font-medium">Earnings Ledger</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-emerald-800/70 hover:bg-emerald-50/50 transition-all" href="#">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-medium">Verification</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-emerald-800/70 hover:bg-emerald-50/50 transition-all" href="#">
+<span class="material-symbols-outlined">campaign</span>
+<span class="font-medium">Advocacy Hub</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-emerald-800/70 hover:bg-emerald-50/50 transition-all" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-medium">Community</span>
+</a>
+</nav>
+<div class="mt-auto px-8">
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+                    Export Data
+                </button>
+<div class="mt-6 flex items-center gap-4 py-3 text-emerald-800/70 hover:text-emerald-900">
+<span class="material-symbols-outlined">help</span>
+<span class="font-medium text-sm">Help Center</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 lg:ml-72 px-6 py-8 pb-32">
+<!-- Header Section with Asymmetry -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div class="max-w-xl">
+<span class="inline-block px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold mb-3 tracking-wider uppercase">Analytics Hub</span>
+<h1 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface tracking-tight leading-[1.1]">Income Analytics Detail</h1>
+<div class="mt-2 flex items-center gap-4">
+<p class="text-on-surface-variant font-medium leading-relaxed">Detailed breakdown of your labor value and fiscal footprint.</p>
+<span class="font-arabic text-xl font-bold text-emerald-900/40" dir="rtl">میزان آمدنی کی تفصیل</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 items-center">
+<!-- Custom Toggle: Compare to City Median -->
+<label class="flex items-center cursor-pointer group">
+<span class="mr-3 text-sm font-semibold text-on-surface-variant">Compare to City Median</span>
+<div class="relative">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+<button class="flex items-center gap-2 px-6 py-3 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-bold shadow-lg shadow-primary/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">file_download</span>
+                        Export CSV
+                    </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Large Card: Line Chart (Earnings over time) -->
+<div class="col-span-12 xl:col-span-8 bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm flex flex-col gap-6 group">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-headline font-bold text-on-surface">Monthly Earnings Trend</h3>
+<p class="text-sm text-on-surface-variant">Jan 2024 - Jun 2024</p>
+</div>
+<div class="text-right">
+<span class="text-3xl font-headline font-extrabold text-primary tracking-tighter">£12,450.80</span>
+<p class="text-xs font-bold text-primary-container flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +14.2% from LY
+                            </p>
+</div>
+</div>
+<!-- Decorative Chart (SVG) -->
+<div class="relative h-64 w-full mt-4">
+<svg class="w-full h-full preserve-3d" viewbox="0 0 800 200">
+<!-- Grid Lines -->
+<line class="text-surface-container" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="180" y2="180"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="130" y2="130"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="80" y2="80"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="30" y2="30"></line>
+<!-- Median Line (City Median) -->
+<path class="opacity-40" d="M0 110 Q 200 115, 400 105 T 800 100" fill="none" stroke="#6a3c00" stroke-dasharray="8,4" stroke-width="2"></path>
+<!-- Main Data Line -->
+<path d="M0 160 Q 100 150, 200 80 T 400 90 T 600 40 T 800 60" fill="none" stroke="url(#lineGradient)" stroke-linecap="round" stroke-width="6"></path>
+<!-- Area Fill -->
+<path class="opacity-20" d="M0 160 Q 100 150, 200 80 T 400 90 T 600 40 T 800 60 L 800 200 L 0 200 Z" fill="url(#areaGradient)"></path>
+<defs>
+<lineargradient id="lineGradient" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#00513f"></stop>
+<stop offset="100%" stop-color="#82d7ba"></stop>
+</lineargradient>
+<lineargradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#006b54"></stop>
+<stop offset="100%" stop-color="transparent"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute inset-0 flex items-end justify-between px-2 pt-4">
+<span class="text-[10px] font-bold text-on-surface-variant">JAN</span>
+<span class="text-[10px] font-bold text-on-surface-variant">FEB</span>
+<span class="text-[10px] font-bold text-on-surface-variant">MAR</span>
+<span class="text-[10px] font-bold text-on-surface-variant">APR</span>
+<span class="text-[10px] font-bold text-on-surface-variant">MAY</span>
+<span class="text-[10px] font-bold text-on-surface-variant text-primary">JUN</span>
+</div>
+</div>
+</div>
+<!-- Platform Breakdown (Bar Chart) -->
+<div class="col-span-12 md:col-span-6 xl:col-span-4 bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm">
+<h3 class="text-xl font-headline font-bold text-on-surface mb-6">Platform Distribution</h3>
+<div class="flex flex-col gap-6">
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-semibold">
+<span class="text-on-surface">Deliveroo Fleet</span>
+<span class="text-primary">45%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[45%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-semibold">
+<span class="text-on-surface">Uber Direct</span>
+<span class="text-primary-fixed-dim">30%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[30%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-semibold">
+<span class="text-on-surface">TaskRabbit Gigs</span>
+<span class="text-on-surface-variant">15%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[15%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-semibold">
+<span class="text-on-surface">Upwork Pro</span>
+<span class="text-on-surface-variant">10%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline-variant w-[10%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Deduction Types (Pie/Donut Visual) -->
+<div class="col-span-12 md:col-span-6 xl:col-span-4 bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm flex flex-col items-center">
+<div class="w-full mb-6">
+<h3 class="text-xl font-headline font-bold text-on-surface text-left">Deduction Profile</h3>
+<p class="text-sm text-on-surface-variant text-left">Fiscal Leakage Analysis</p>
+</div>
+<div class="relative w-48 h-48 mb-6">
+<!-- Custom CSS Pie Chart -->
+<div class="absolute inset-0 rounded-full border-[18px] border-primary-container border-r-tertiary border-b-error border-l-secondary opacity-90 rotate-45"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center bg-surface-container-lowest rounded-full m-8">
+<span class="text-2xl font-headline font-bold text-on-surface">£842</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Total Fees</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-8 gap-y-3 w-full">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary-container"></div>
+<span class="text-xs font-semibold text-on-surface-variant">Platform (62%)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<span class="text-xs font-semibold text-on-surface-variant">Tax (20%)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<span class="text-xs font-semibold text-on-surface-variant">Fuel (12%)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="text-xs font-semibold text-on-surface-variant">Insur. (6%)</span>
+</div>
+</div>
+</div>
+<!-- High Impact Summary Cards -->
+<div class="col-span-12 xl:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-primary p-6 rounded-[2rem] text-white">
+<span class="material-symbols-outlined mb-4 opacity-70">verified_user</span>
+<h4 class="text-sm font-bold opacity-80 mb-1 uppercase tracking-wider">Hourly Value</h4>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold">£24.50</span>
+<span class="text-xs font-bold bg-white/20 px-2 py-0.5 rounded-full">Top 5%</span>
+</div>
+</div>
+<div class="bg-surface-container-high p-6 rounded-[2rem]">
+<span class="material-symbols-outlined mb-4 text-primary">distance</span>
+<h4 class="text-sm font-bold text-on-surface-variant mb-1 uppercase tracking-wider">Distance Tracked</h4>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold text-on-surface">1,420 km</span>
+</div>
+</div>
+<div class="bg-tertiary-fixed p-6 rounded-[2rem] text-on-tertiary-fixed">
+<span class="material-symbols-outlined mb-4">bolt</span>
+<h4 class="text-sm font-bold opacity-80 mb-1 uppercase tracking-wider">Peak Efficiency</h4>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold">Fri, 6-9pm</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Ledger Preview Section -->
+<section class="mt-12">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-headline font-bold text-on-surface">Verification Log</h2>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline" href="#">View All Ledger <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low border-none">
+<th class="px-8 py-5 text-xs font-bold text-on-surface-variant uppercase tracking-wider">Date &amp; Time</th>
+<th class="px-8 py-5 text-xs font-bold text-on-surface-variant uppercase tracking-wider">Platform</th>
+<th class="px-8 py-5 text-xs font-bold text-on-surface-variant uppercase tracking-wider">Gross Pay</th>
+<th class="px-8 py-5 text-xs font-bold text-on-surface-variant uppercase tracking-wider">Verified State</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<tr class="group hover:bg-surface-container-low/30 transition-colors">
+<td class="px-8 py-6">
+<p class="font-bold text-on-surface">Jun 24, 14:30</p>
+<p class="text-xs text-on-surface-variant">Mon-Day Shift</p>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-fixed-dim"></div>
+<span class="font-semibold text-on-surface">Deliveroo Fleet</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="font-bold font-headline text-on-surface">£142.00</span>
+</td>
+<td class="px-8 py-6">
+<span class="px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-[11px] font-bold uppercase tracking-widest">Verified</span>
+</td>
+</tr>
+<tr class="group hover:bg-surface-container-low/30 transition-colors">
+<td class="px-8 py-6">
+<p class="font-bold text-on-surface">Jun 23, 19:15</p>
+<p class="text-xs text-on-surface-variant">Sun-Eve Shift</p>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container"></div>
+<span class="font-semibold text-on-surface">Uber Direct</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="font-bold font-headline text-on-surface">£86.40</span>
+</td>
+<td class="px-8 py-6">
+<span class="px-4 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-[11px] font-bold uppercase tracking-widest">Pending</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full rounded-t-[2rem] lg:hidden z-50 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-2xl shadow-[0_-4px_24px_rgba(0,0,0,0.04)]">
+<div class="flex justify-around items-center px-4 pb-8 pt-3">
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40 group" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-[11px] font-medium font-['Inter']">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-emerald-900 dark:bg-emerald-100 text-white dark:text-emerald-950 rounded-2xl px-5 py-2 group scale-105" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="text-[11px] font-medium font-['Inter']">Ledger</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40 group" href="#">
+<span class="material-symbols-outlined mb-1">diversity_3</span>
+<span class="text-[11px] font-medium font-['Inter']">Impact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40 group" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="text-[11px] font-medium font-['Inter']">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

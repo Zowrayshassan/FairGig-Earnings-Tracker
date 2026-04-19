@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#9ef3d6",
+                    "primary-container": "#006b54",
+                    "on-error": "#ffffff",
+                    "on-surface": "#181d1b",
+                    "surface-variant": "#dfe3e1",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#016b54",
+                    "background": "#f6faf7",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#eef2ef",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#b1ccc5",
+                    "surface-container-low": "#f0f5f2",
+                    "surface-container-highest": "#dfe3e1",
+                    "surface-container": "#ebefec",
+                    "tertiary-fixed": "#ffdcbe",
+                    "outline": "#6f7a74",
+                    "on-secondary-container": "#4e6862",
+                    "on-tertiary-fixed": "#2d1600",
+                    "on-secondary-fixed": "#06201b",
+                    "on-tertiary-container": "#ffd0a4",
+                    "inverse-surface": "#2d3130",
+                    "primary-fixed-dim": "#82d7ba",
+                    "on-tertiary-fixed-variant": "#6a3c00",
+                    "on-primary-fixed-variant": "#00513f",
+                    "secondary": "#4a635d",
+                    "outline-variant": "#bec9c3",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "primary": "#00513f",
+                    "tertiary": "#6a3c00",
+                    "on-secondary-fixed-variant": "#334b46",
+                    "inverse-primary": "#82d7ba",
+                    "tertiary-fixed-dim": "#ffb871",
+                    "on-primary-container": "#94e8cb",
+                    "tertiary-container": "#8b5000",
+                    "secondary-container": "#cae6de",
+                    "on-surface-variant": "#3e4944",
+                    "on-background": "#181d1b",
+                    "surface-dim": "#d7dbd8",
+                    "on-primary-fixed": "#002118",
+                    "secondary-fixed": "#cde8e1",
+                    "surface": "#f6faf7",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e5e9e6",
+                    "surface-bright": "#f6faf7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-[#f6faf7]/70 dark:bg-emerald-950/70 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-3 mx-auto w-full font-['Plus_Jakarta_Sans'] tracking-tight">
+<div class="text-2xl font-extrabold text-emerald-900 dark:text-emerald-50">FairGig</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-6 mr-8">
+<a class="text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 transition-colors px-3 py-1 rounded-lg" href="#">Home</a>
+<a class="text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-700 font-bold px-3 py-1" href="#">Verification</a>
+<a class="text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 transition-colors px-3 py-1 rounded-lg" href="#">Ledger</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-emerald-900 hover:bg-emerald-50 rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-emerald-900 hover:bg-emerald-50 rounded-full transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtwF1_66pXhu3dcUa1rZF28ygQax7Azm1dXt3pfMTapbyKFt_mrXt223G6or30IC-SNSTUD3xAg4ejiadBNaWIcmb_CgscgSMxHa0iuEaZm8-hUEEh66GJUWIyRtGytsdDh6lJqqf4VVF_IuSQ7K_OkFYWVsiEokc3Wsqr6daFh0p7Grp6MCkCUHFj5U1YpVJa1QOywG6vMgSD4w8HweGMcuqNf6J_gxHuKc_VUv-_6sqyDwdkJ6iaX7D9zw3QeMi-dXqEGvm-wwxl"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 hidden lg:flex flex-col bg-white dark:bg-emerald-950 bg-surface-container-low border-r border-emerald-50/10 py-8 gap-4 z-40">
+<div class="px-6 mb-8">
+<h2 class="text-xl font-bold text-emerald-900 dark:text-emerald-100">Worker Portal</h2>
+<p class="text-xs text-emerald-800/70 uppercase tracking-widest font-semibold mt-1">The Ethical Ledger</p>
+</div>
+<nav class="flex-1 space-y-1 px-4">
+<a class="flex items-center gap-3 px-4 py-3 text-emerald-800/70 hover:text-emerald-900 hover:bg-emerald-50/50 transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-emerald-800/70 hover:text-emerald-900 hover:bg-emerald-50/50 transition-all" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span> Earnings Ledger
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-emerald-50 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-50 font-semibold rounded-r-full translate-x-1 duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span> Verification
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-emerald-800/70 hover:text-emerald-900 hover:bg-emerald-50/50 transition-all" href="#">
+<span class="material-symbols-outlined">campaign</span> Advocacy Hub
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-emerald-800/70 hover:text-emerald-900 hover:bg-emerald-50/50 transition-all" href="#">
+<span class="material-symbols-outlined">groups</span> Community
+                </a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full py-3 bg-primary text-on-primary rounded-xl font-bold hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span> Export Data
+                </button>
+<a class="flex items-center gap-3 px-4 py-3 mt-4 text-emerald-800/70 hover:text-emerald-900" href="#">
+<span class="material-symbols-outlined">help</span> Help Center
+                </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 lg:ml-72 min-h-screen px-4 md:px-12 py-8 pb-32 lg:pb-8">
+<!-- Header Section -->
+<div class="mb-10">
+<nav class="flex items-center gap-2 text-on-surface-variant text-sm mb-4">
+<span class="hover:underline cursor-pointer">Verification</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="font-bold text-on-surface">Detail View</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">Screenshot Detail</h1>
+<p class="text-on-surface-variant mt-2 text-lg">Batch ID: FG-88291-TX • Submitted Oct 24, 2023</p>
+</div>
+<!-- Status Badge -->
+<div class="inline-flex items-center gap-3 px-6 py-3 bg-error-container text-on-error-container rounded-full ring-1 ring-error/20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">report</span>
+<span class="font-bold tracking-wide uppercase text-sm">Flagged for Review</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Proof Image Section (7/12) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-[2rem] p-4 shadow-sm border border-outline-variant/5">
+<div class="relative group overflow-hidden rounded-[1.5rem]">
+<img alt="Uploaded screenshot of delivery app earnings" class="w-full h-auto object-cover rounded-[1.5rem] transition-transform duration-500 group-hover:scale-[1.02]" data-alt="high resolution screenshot of a mobile food delivery app showing trip history, timestamps, and fare breakdown in a clear interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjTkFlTCwe62Xlp1HO8g6Kh4UWUTQlq9RIuR9K-Hx4IKxB1YxlFsxKK6JjE5ebt5gNflAPoH0zy-FU_nU6NnECqbC8RUpZgRjftf3GP-lHAd9PmvD1BQI4bw8j3LiqFSZsEIvkn9CVpCOLWbVRRuwlyEKLEpjD5vXbWl1wEQjTEyKtDUwI_YTgQkpS5ne1cf4j-nFYTSsMq2Q3uEhKW8l5IOoCKS98a9pPJD5bSB4yk9koBPQKovItyPMYuGCfDFA4ueUJocjkb85f"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<span class="bg-white/90 backdrop-blur-md text-primary font-bold px-4 py-2 rounded-lg text-xs uppercase">Original Upload</span>
+<button class="bg-primary text-on-primary p-3 rounded-full shadow-xl">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+</div>
+</div>
+<div class="mt-6 px-4 pb-4">
+<h3 class="font-bold text-on-surface text-xl">Metadata Analysis</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+<div class="p-3 bg-surface-container-low rounded-xl">
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Device</p>
+<p class="font-medium text-sm">iPhone 14 Pro</p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl">
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Location</p>
+<p class="font-medium text-sm">London, UK</p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl">
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Timestamp</p>
+<p class="font-medium text-sm">24/10/23 14:02</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Anomaly & Action Sidebar (5/12) -->
+<div class="lg:col-span-5 space-y-6">
+<!-- Anomalies Card -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-8 shadow-sm border border-outline-variant/5">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 bg-error-container text-error flex items-center justify-center rounded-xl">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Anomaly Flags</h3>
+</div>
+<div class="space-y-4">
+<!-- Anomaly Item -->
+<div class="p-5 bg-surface-container rounded-2xl border-l-4 border-error">
+<div class="flex justify-between items-start mb-2">
+<span class="font-bold text-on-surface">UI Inconsistency</span>
+<span class="text-[10px] font-bold bg-error text-on-error px-2 py-0.5 rounded-full uppercase">High Risk</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                    The font-weight of the earnings figure does not match the standard application UI. Possible overlay detected.
+                                </p>
+</div>
+<!-- Anomaly Item -->
+<div class="p-5 bg-surface-container rounded-2xl border-l-4 border-tertiary">
+<div class="flex justify-between items-start mb-2">
+<span class="font-bold text-on-surface">Timestamp Mismatch</span>
+<span class="text-[10px] font-bold bg-tertiary text-on-tertiary-container px-2 py-0.5 rounded-full uppercase">Review Needed</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                    The metadata timestamp (14:02) conflicts with the visual clock in the status bar (11:45).
+                                </p>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<p class="text-xs text-on-surface-variant mb-6 leading-relaxed italic">
+                                * These flags were generated by our AI-Verification engine. If you believe this is an error, please request a manual review by a human advocate.
+                            </p>
+<button class="w-full py-4 bg-primary text-on-primary rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">refresh</span>
+                                Request Re-review
+                            </button>
+<button class="w-full mt-3 py-4 bg-secondary-container text-on-secondary-container rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-secondary-fixed-dim transition-all">
+<span class="material-symbols-outlined">chat</span>
+                                Contact Advocate
+                            </button>
+</div>
+</div>
+<!-- Guidelines Hint -->
+<div class="bg-primary-container text-on-primary-container rounded-[2rem] p-8">
+<h4 class="font-bold text-lg mb-2">Verification Tip</h4>
+<p class="text-sm opacity-90 leading-relaxed">
+                            To ensure 100% verification, always capture the full screen including the notification bar and system clock. Avoid using filters or third-party screenshot editors.
+                        </p>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-3 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-2xl lg:hidden z-50 rounded-t-[2rem] shadow-[0_-4px_24px_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[11px] font-medium font-['Inter']">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[11px] font-medium font-['Inter']">Ledger</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-emerald-900 dark:bg-emerald-100 text-white dark:text-emerald-950 rounded-2xl px-5 py-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[11px] font-medium font-['Inter']">Impact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[11px] font-medium font-['Inter']">Profile</span>
+</a>
+</nav>
+</body></html>

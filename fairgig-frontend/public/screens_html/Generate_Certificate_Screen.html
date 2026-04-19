@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FairGig | Earnings Certification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#9ef3d6",
+                    "primary-container": "#006b54",
+                    "on-error": "#ffffff",
+                    "on-surface": "#181d1b",
+                    "surface-variant": "#dfe3e1",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#016b54",
+                    "background": "#f6faf7",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#eef2ef",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#b1ccc5",
+                    "surface-container-low": "#f0f5f2",
+                    "surface-container-highest": "#dfe3e1",
+                    "surface-container": "#ebefec",
+                    "tertiary-fixed": "#ffdcbe",
+                    "outline": "#6f7a74",
+                    "on-secondary-container": "#4e6862",
+                    "on-tertiary-fixed": "#2d1600",
+                    "on-secondary-fixed": "#06201b",
+                    "on-tertiary-container": "#ffd0a4",
+                    "inverse-surface": "#2d3130",
+                    "primary-fixed-dim": "#82d7ba",
+                    "on-tertiary-fixed-variant": "#6a3c00",
+                    "on-primary-fixed-variant": "#00513f",
+                    "secondary": "#4a635d",
+                    "outline-variant": "#bec9c3",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "primary": "#00513f",
+                    "tertiary": "#6a3c00",
+                    "on-secondary-fixed-variant": "#334b46",
+                    "inverse-primary": "#82d7ba",
+                    "tertiary-fixed-dim": "#ffb871",
+                    "on-primary-container": "#94e8cb",
+                    "tertiary-container": "#8b5000",
+                    "secondary-container": "#cae6de",
+                    "on-surface-variant": "#3e4944",
+                    "on-background": "#181d1b",
+                    "surface-dim": "#d7dbd8",
+                    "on-primary-fixed": "#002118",
+                    "secondary-fixed": "#cde8e1",
+                    "surface": "#f6faf7",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e5e9e6",
+                    "surface-bright": "#f6faf7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-[#f6faf7]/70 dark:bg-emerald-950/70 backdrop-blur-xl flex justify-between items-center px-6 py-3 mx-auto w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-extrabold text-emerald-900 dark:text-emerald-50 font-['Plus_Jakarta_Sans'] tracking-tight">FairGig</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 transition-colors px-3 py-1 rounded-lg" href="#">Home</a>
+<a class="text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 transition-colors px-3 py-1 rounded-lg" href="#">Ledger</a>
+<a class="text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-700 font-bold px-3 py-1" href="#">Verification</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="bg-surface-container-low border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary w-64" placeholder="Search certifications..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-emerald-900 dark:text-emerald-100 p-2 rounded-full hover:bg-emerald-50 transition-colors">notifications</button>
+<img alt="User profile" class="w-10 h-10 rounded-full border-2 border-primary-fixed" data-alt="close-up portrait of a professional worker with a friendly expression in natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGg7Alg1DFMZ_UXXekJB-yu3ebPAQtvkx_ZKsdsPbZA1oau7dOiOzmDwVvGgKKk3BGvWRfTL24dvfyTKw8t4_e-g1ZdXS1vHvjURtscd8v3VYW6P5Db0vYV8rCpGrlP2Pq8vYnNt111SGQ4p8w6cU1ZaCCNlDcyyMGjNS1TQbnzHwOjYQSpX-qOzyI6XypDyNLkBVk1cxovffvltECYcPiQCKCefzo0_bF11RdxLyAG8snitm2aqNtLt-7QYJJslqawCGkgai3I6k9"/>
+</div>
+</nav>
+<!-- SideNavBar (Desktop Only) -->
+<aside class="h-screen w-72 fixed left-0 top-0 hidden lg:flex flex-col bg-white dark:bg-emerald-950 bg-surface-container-low border-r border-emerald-50/10 py-8 gap-4 z-40">
+<div class="px-8 mb-8">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h2 class="font-headline font-bold text-emerald-900 dark:text-emerald-100">Worker Portal</h2>
+<p class="text-xs text-emerald-800/70 dark:text-emerald-200/70">The Ethical Ledger</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/30 transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/30 transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-medium">Earnings Ledger</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-emerald-50 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-50 font-semibold rounded-r-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-medium">Verification</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/30 transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined">campaign</span>
+<span class="font-medium">Advocacy Hub</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/30 transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-medium">Community</span>
+</a>
+</nav>
+<div class="px-8 mt-auto">
+<button class="w-full bg-primary text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-sm">download</span>
+                Export Data
+            </button>
+<div class="mt-6 pt-6 border-t border-emerald-50/10">
+<a class="flex items-center gap-3 text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm">Help Center</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-72 min-h-screen p-4 md:p-8 pb-32 lg:pb-8">
+<div class="max-w-6xl mx-auto">
+<!-- Header Section -->
+<header class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-4xl md:text-5xl font-headline font-extrabold text-primary tracking-tight mb-2">Certification</h1>
+<p class="text-on-surface-variant max-w-md">Generate a tamper-proof earnings certificate verified by the FairGig ethical ledger protocol.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 bg-primary-fixed px-4 py-2 rounded-full text-on-primary-fixed-variant font-semibold text-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Verified Profile
+                    </div>
+</div>
+</header>
+<!-- Bento Layout Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Controls Side (Left/Top) -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Date Picker Card -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm border border-outline-variant/10">
+<h3 class="font-headline font-bold text-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">date_range</span>
+                            Report Parameters
+                        </h3>
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2">Certification Type</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl py-3 focus:ring-2 focus:ring-primary text-on-surface">
+<option>Full Earnings Report</option>
+<option>Shift Verification</option>
+<option>Impact Statement</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2">Start Date</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-3 focus:ring-2 focus:ring-primary text-sm" type="date" value="2023-10-01"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2">End Date</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-3 focus:ring-2 focus:ring-primary text-sm" type="date" value="2023-12-31"/>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-secondary-container text-on-secondary-container py-4 rounded-2xl font-bold hover:bg-primary-fixed transition-all active:scale-95">
+                                    Update Preview
+                                </button>
+</div>
+</div>
+</div>
+<!-- Statistics Snapshot -->
+<div class="bg-primary text-white rounded-3xl p-8 relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-container rounded-full blur-3xl opacity-50"></div>
+<h3 class="font-headline font-medium opacity-80 mb-1">Period Total</h3>
+<div class="text-4xl font-headline font-extrabold tracking-tight mb-4">$4,820.50</div>
+<div class="flex gap-4">
+<div>
+<p class="text-[10px] uppercase font-bold opacity-60">Verified Shifts</p>
+<p class="text-lg font-bold">142</p>
+</div>
+<div class="w-px h-10 bg-white/20"></div>
+<div>
+<p class="text-[10px] uppercase font-bold opacity-60">Avg. Rate</p>
+<p class="text-lg font-bold">$34/hr</p>
+</div>
+</div>
+</div>
+</div>
+<!-- PDF Preview Side (Right/Bottom) -->
+<div class="lg:col-span-8">
+<div class="bg-surface-container-low rounded-[2.5rem] p-4 md:p-8 border border-outline-variant/10 shadow-xl overflow-hidden relative group">
+<!-- Toolbar Overlay -->
+<div class="absolute top-6 right-6 z-10 flex gap-2">
+<button class="bg-white/80 backdrop-blur shadow-sm p-3 rounded-full hover:bg-white transition-all text-on-surface">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+<button class="bg-primary text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:shadow-lg transition-all active:scale-95 shadow-primary/20">
+<span class="material-symbols-outlined text-sm">download</span>
+                                Download PDF
+                            </button>
+</div>
+<!-- The "PDF" Document Content -->
+<div class="bg-white rounded-xl shadow-2xl min-h-[800px] w-full p-12 text-gray-800 font-serif flex flex-col mx-auto max-w-2xl transform transition-transform group-hover:scale-[1.01] duration-500">
+<!-- Document Header -->
+<div class="flex justify-between items-start mb-12">
+<div class="space-y-1">
+<div class="text-2xl font-sans font-black text-primary uppercase tracking-tighter">FairGig Ledger</div>
+<div class="text-[10px] font-sans font-bold text-on-surface-variant/60 uppercase tracking-widest">Protocol Version 4.2.1-SECURE</div>
+</div>
+<div class="text-right">
+<div class="font-sans font-bold text-xs">Certificate ID: FG-2023-88219</div>
+<div class="font-sans text-xs text-on-surface-variant">Issued: Dec 31, 2023</div>
+</div>
+</div>
+<div class="mb-12">
+<h2 class="text-3xl font-sans font-extrabold text-primary mb-2">Earnings Certification</h2>
+<p class="text-sm font-sans text-on-surface-variant">This document certifies the professional activity and earnings for:</p>
+<div class="mt-4 pb-4 border-b border-surface-container">
+<h3 class="text-xl font-sans font-bold">Marcus A. Robertson</h3>
+<p class="text-xs font-sans text-on-surface-variant">Verified Logistic Specialist • Member since June 2022</p>
+</div>
+</div>
+<!-- Shift List Table -->
+<div class="flex-1">
+<div class="grid grid-cols-12 gap-2 mb-4 px-2">
+<div class="col-span-3 text-[10px] font-bold uppercase tracking-wider font-sans text-on-surface-variant">Date</div>
+<div class="col-span-5 text-[10px] font-bold uppercase tracking-wider font-sans text-on-surface-variant">Verified Task/Employer</div>
+<div class="col-span-2 text-[10px] font-bold uppercase tracking-wider font-sans text-on-surface-variant text-right">Hours</div>
+<div class="col-span-2 text-[10px] font-bold uppercase tracking-wider font-sans text-on-surface-variant text-right">Amount</div>
+</div>
+<div class="space-y-4 mb-8">
+<div class="grid grid-cols-12 gap-2 px-2 py-3 rounded-lg bg-surface-container-low/30 border border-surface-container/50">
+<div class="col-span-3 text-xs font-sans font-medium">Dec 12, 2023</div>
+<div class="col-span-5 text-xs font-sans">
+<span class="font-bold block">Urban Logistics Hub</span>
+<span class="text-[10px] opacity-60">Inventory Validation #V8810</span>
+</div>
+<div class="col-span-2 text-xs font-sans text-right">8.00</div>
+<div class="col-span-2 text-xs font-sans font-bold text-right">$272.00</div>
+</div>
+<div class="grid grid-cols-12 gap-2 px-2 py-3 rounded-lg border border-surface-container/50">
+<div class="col-span-3 text-xs font-sans font-medium">Dec 10, 2023</div>
+<div class="col-span-5 text-xs font-sans">
+<span class="font-bold block">Metro Distribution</span>
+<span class="text-[10px] opacity-60">Express Sortation #V7762</span>
+</div>
+<div class="col-span-2 text-xs font-sans text-right">6.50</div>
+<div class="col-span-2 text-xs font-sans font-bold text-right">$221.00</div>
+</div>
+<div class="grid grid-cols-12 gap-2 px-2 py-3 rounded-lg bg-surface-container-low/30 border border-surface-container/50">
+<div class="col-span-3 text-xs font-sans font-medium">Dec 08, 2023</div>
+<div class="col-span-5 text-xs font-sans">
+<span class="font-bold block">FairCargo Int.</span>
+<span class="text-[10px] opacity-60">Dispatch Audit #V5519</span>
+</div>
+<div class="col-span-2 text-xs font-sans text-right">10.00</div>
+<div class="col-span-2 text-xs font-sans font-bold text-right">$340.00</div>
+</div>
+<div class="grid grid-cols-12 gap-2 px-2 py-3">
+<div class="col-span-12 text-center text-[10px] italic text-on-surface-variant font-sans py-2">
+                                            ... 139 additional verified entries following this page ...
+                                        </div>
+</div>
+</div>
+</div>
+<!-- Signature & Seal -->
+<div class="mt-12 pt-8 border-t-2 border-primary-container/20 flex justify-between items-end">
+<div>
+<div class="mb-4 text-[10px] uppercase font-sans font-black text-primary-container tracking-widest">Protocol Attestation</div>
+<div class="h-16 w-48 bg-[url('https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?q=80&amp;w=200&amp;auto=format&amp;fit=crop')] bg-contain bg-no-repeat grayscale opacity-80" data-alt="a professional handwritten ink signature on clean white paper"></div>
+<div class="mt-2 text-xs font-sans font-bold">Ledger Authority Signature</div>
+</div>
+<div class="text-right">
+<div class="w-24 h-24 bg-surface-container-low rounded-full border-4 border-primary-fixed flex items-center justify-center mb-2 mx-auto">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="text-[10px] font-sans font-bold uppercase tracking-tighter">Blockchain Verified Seal</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-3 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-2xl lg:hidden z-50 rounded-t-[2rem] shadow-[0_-4px_24px_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[11px] font-medium font-['Inter']">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[11px] font-medium font-['Inter']">Ledger</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-emerald-900 dark:bg-emerald-100 text-white dark:text-emerald-950 rounded-2xl px-5 py-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[11px] font-medium font-['Inter']">Verify</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[11px] font-medium font-['Inter']">Profile</span>
+</a>
+</nav>
+</body></html>

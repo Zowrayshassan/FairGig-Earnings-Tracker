@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Earnings Ledger | FairGig</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#9ef3d6",
+                    "primary-container": "#006b54",
+                    "on-error": "#ffffff",
+                    "on-surface": "#181d1b",
+                    "surface-variant": "#dfe3e1",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#016b54",
+                    "background": "#f6faf7",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#eef2ef",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#b1ccc5",
+                    "surface-container-low": "#f0f5f2",
+                    "surface-container-highest": "#dfe3e1",
+                    "surface-container": "#ebefec",
+                    "tertiary-fixed": "#ffdcbe",
+                    "outline": "#6f7a74",
+                    "on-secondary-container": "#4e6862",
+                    "on-tertiary-fixed": "#2d1600",
+                    "on-secondary-fixed": "#06201b",
+                    "on-tertiary-container": "#ffd0a4",
+                    "inverse-surface": "#2d3130",
+                    "primary-fixed-dim": "#82d7ba",
+                    "on-tertiary-fixed-variant": "#6a3c00",
+                    "on-primary-fixed-variant": "#00513f",
+                    "secondary": "#4a635d",
+                    "outline-variant": "#bec9c3",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "primary": "#00513f",
+                    "tertiary": "#6a3c00",
+                    "on-secondary-fixed-variant": "#334b46",
+                    "inverse-primary": "#82d7ba",
+                    "tertiary-fixed-dim": "#ffb871",
+                    "on-primary-container": "#94e8cb",
+                    "tertiary-container": "#8b5000",
+                    "secondary-container": "#cae6de",
+                    "on-surface-variant": "#3e4944",
+                    "on-background": "#181d1b",
+                    "surface-dim": "#d7dbd8",
+                    "on-primary-fixed": "#002118",
+                    "secondary-fixed": "#cde8e1",
+                    "surface": "#f6faf7",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e5e9e6",
+                    "surface-bright": "#f6faf7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .brand-logo { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-[#f6faf7]/70 dark:bg-emerald-950/70 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-3 mx-auto w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-extrabold text-emerald-900 dark:text-emerald-50 tracking-tight">FairGig</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-700 font-bold py-1" href="#">Earnings Ledger</a>
+<a class="text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 transition-colors px-3 py-1 rounded-lg" href="#">Advocacy Hub</a>
+<a class="text-emerald-800/60 dark:text-emerald-200/60 hover:bg-emerald-50 dark:hover:bg-emerald-900/50 transition-colors px-3 py-1 rounded-lg" href="#">Community</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-emerald-50 rounded-full transition-colors material-symbols-outlined text-emerald-900" data-icon="notifications">notifications</button>
+<button class="p-2 hover:bg-emerald-50 rounded-full transition-colors material-symbols-outlined text-emerald-900" data-icon="settings">settings</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/30">
+<img alt="User profile" data-alt="professional portrait of a gig worker in smart casual attire with a warm, confident expression in a bright studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD_FU97dEV48dZErHQHyoktN1Xv_QP0hPuaySsKeT_GXwmFmRwx7Wb1BLauk59lgVtqeCgl2YsxiW1K4Gz_moaTumeqdPeqmGVM15vEXPULkNfoUT4YbaZfPDvQ2bd9wc2ZSFFWOuQGBiPWa0iJRitfOuK7BLyJWnKVpxtZDApXPo_U5Ms_6-fJuY1LtKnpUpbjJ_JsjhK3q0iJiKr4-bipYKItrTLVQd1Z58PX5D1iTgz9MOK2SgXWnX2Y_L6mT8U3wSQD2r47fSM"/>
+</div>
+</div>
+</div>
+</nav>
+<div class="flex">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 hidden lg:flex flex-col bg-white dark:bg-emerald-950 bg-surface-container-low border-r border-emerald-50/10 py-8 gap-4 z-40 pt-20">
+<div class="px-6 mb-6">
+<h2 class="text-emerald-900 dark:text-emerald-100 font-semibold text-lg leading-relaxed">Worker Portal</h2>
+<p class="text-emerald-800/70 dark:text-emerald-200/70 text-xs">The Ethical Ledger</p>
+</div>
+<nav class="flex-1 space-y-1 pr-4">
+<a class="flex items-center gap-3 px-6 py-3 text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900 transition-all hover:bg-emerald-50/50" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 bg-emerald-50 dark:bg-emerald-900 text-emerald-900 dark:text-emerald-50 font-semibold rounded-r-full translate-x-1 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-medium">Earnings Ledger</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900 transition-all hover:bg-emerald-50/50" href="#">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+<span class="font-medium">Verification</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900 transition-all hover:bg-emerald-50/50" href="#">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+<span class="font-medium">Advocacy Hub</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-emerald-800/70 dark:text-emerald-200/70 hover:text-emerald-900 transition-all hover:bg-emerald-50/50" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-medium">Community</span>
+</a>
+</nav>
+<div class="px-6 mt-auto space-y-4">
+<a class="flex items-center gap-3 py-2 text-emerald-800/70 dark:text-emerald-200/70" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="text-sm">Help Center</span>
+</a>
+<button class="w-full py-3 bg-primary text-on-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                    Export Data
+                </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 lg:ml-72 p-6 md:p-12 max-w-7xl">
+<!-- Header Section with High-Impact Typography -->
+<header class="mb-12">
+<p class="text-primary font-semibold tracking-wider text-sm mb-2 uppercase">Financial Summary</p>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-5xl md:text-6xl font-extrabold text-on-surface tracking-tight leading-none mb-4">Earnings History</h1>
+<p class="text-on-surface-variant max-w-xl leading-relaxed">A transparent, tamper-proof record of your labor. Every hour accounted for, every cent verified.</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm flex flex-col items-end min-w-[240px]">
+<span class="text-on-surface-variant text-sm font-medium mb-1">Total Net Balance</span>
+<span class="text-4xl font-bold text-primary tracking-tighter">$4,282.40</span>
+<div class="flex items-center gap-1 text-primary text-xs font-bold mt-2">
+<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span>
+                            +12.5% vs last month
+                        </div>
+</div>
+</div>
+</header>
+<!-- Filter Bar -->
+<section class="bg-surface-container-low rounded-3xl p-6 mb-8 flex flex-wrap items-center gap-4 border border-outline-variant/5">
+<div class="flex-1 min-w-[200px] relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Search entries..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<select class="appearance-none pl-4 pr-10 py-3 bg-surface-container-lowest border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-sm text-on-surface-variant">
+<option>All Platforms</option>
+<option>Uber Eats</option>
+<option>DoorDash</option>
+<option>Instacart</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+<div class="relative">
+<input class="pl-4 pr-4 py-3 bg-surface-container-lowest border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-sm text-on-surface-variant" type="date"/>
+</div>
+<button class="p-3 bg-surface-container-lowest text-on-surface rounded-xl hover:bg-white transition-all material-symbols-outlined border border-outline-variant/5" data-icon="filter_list">filter_list</button>
+</div>
+</section>
+<!-- Ledger Table (Editorial List Layout) -->
+<div class="bg-surface-container-lowest rounded-[2.5rem] overflow-hidden border border-outline-variant/5">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-on-surface-variant text-xs uppercase tracking-widest bg-surface-container/30">
+<th class="px-8 py-6 font-bold">Date &amp; Source</th>
+<th class="px-8 py-6 font-bold">Hours</th>
+<th class="px-8 py-6 font-bold">Gross Pay</th>
+<th class="px-8 py-6 font-bold">Net Pay</th>
+<th class="px-8 py-6 font-bold">Status</th>
+<th class="px-8 py-6 font-bold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Entry 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined" data-icon="electric_car">electric_car</span>
+</div>
+<div>
+<div class="font-bold text-on-surface">Oct 24, 2023</div>
+<div class="text-xs text-on-surface-variant">Uber Eats</div>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 font-medium text-on-surface">6.5 hrs</td>
+<td class="px-8 py-6 font-medium text-on-surface-variant">$142.50</td>
+<td class="px-8 py-6 font-bold text-primary">$128.25</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-primary-fixed text-on-primary-fixed-variant">
+                                        Verified
+                                    </span>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-secondary-container rounded-lg transition-colors material-symbols-outlined text-sm" data-icon="visibility">visibility</button>
+<button class="p-2 hover:bg-secondary-container rounded-lg transition-colors material-symbols-outlined text-sm" data-icon="edit">edit</button>
+<button class="p-2 hover:bg-secondary-container rounded-lg transition-colors material-symbols-outlined text-sm" data-icon="fact_check">fact_check</button>
+</div>
+</td>
+</tr>
+<!-- Entry 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined" data-icon="local_mall">local_mall</span>
+</div>
+<div>
+<div class="font-bold text-on-surface">Oct 23, 2023</div>
+<div class="text-xs text-on-surface-variant">Instacart</div>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 font-medium text-on-surface">4.2 hrs</td>
+<td class="px-8 py-6 font-medium text-on-surface-variant">$88.00</td>
+<td class="px-8 py-6 font-bold text-primary">$76.50</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-tertiary-fixed text-on-tertiary-fixed-variant">
+                                        Pending
+                                    </span>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-secondary-container rounded-lg transition-colors material-symbols-outlined text-sm" data-icon="visibility">visibility</button>
+<button class="p-2 hover:bg-secondary-container rounded-lg transition-colors material-symbols-outlined text-sm" data-icon="edit">edit</button>
+<button class="p-2 hover:bg-secondary-container rounded-lg transition-colors material-symbols-outlined text-sm text-error" data-icon="warning">warning</button>
+</div>
+</td>
+</tr>
+<!-- Entry 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined" data-icon="delivery_dining">delivery_dining</span>
+</div>
+<div>
+<div class="font-bold text-on-surface">Oct 21, 2023</div>
+<div class="text-xs text-on-surface-variant">DoorDash</div>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 font-medium text-on-surface">8.0 hrs</td>
+<td class="px-8 py-6 font-medium text-on-surface-variant">$210.00</td>
+<td class="px-8 py-6 font-bold text-primary">$189.00</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-error-container text-on-error-container">
+                                        Disputed
+                                    </span>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-secondary-container rounded-lg transition-colors material-symbols-outlined text-sm" data-icon="visibility">visibility</button>
+<button class="p-2 hover:bg-secondary-container rounded-lg transition-colors material-symbols-outlined text-sm" data-icon="edit">edit</button>
+<button class="p-2 hover:bg-secondary-container rounded-lg transition-colors material-symbols-outlined text-sm text-error" data-icon="anomaly_check" style="font-variation-settings: 'FILL' 1;">error</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer -->
+<div class="px-8 py-6 bg-surface-container/10 flex items-center justify-between border-t border-surface-container">
+<span class="text-xs text-on-surface-variant font-medium">Showing 1 to 10 of 24 entries</span>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg hover:bg-surface-container-low material-symbols-outlined text-sm disabled:opacity-30" data-icon="chevron_left" disabled="">chevron_left</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary text-xs font-bold">1</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-low text-on-surface-variant text-xs font-bold">2</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-low text-on-surface-variant text-xs font-bold">3</button>
+<button class="p-2 rounded-lg hover:bg-surface-container-low material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[2rem] lg:hidden z-50 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-2xl shadow-[0_-4px_24px_rgba(0,0,0,0.04)]">
+<div class="flex justify-around items-center px-4 pb-8 pt-3">
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[11px] font-medium font-['Inter']">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-emerald-900 dark:bg-emerald-100 text-white dark:text-emerald-950 rounded-2xl px-5 py-2 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-[11px] font-medium font-['Inter']">Ledger</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="diversity_3">diversity_3</span>
+<span class="text-[11px] font-medium font-['Inter']">Impact</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[11px] font-medium font-['Inter']">Profile</span>
+</a>
+</div>
+</nav>
+<!-- Contextual FAB (Suppressing as per guidelines on Detail/History screens, but adding one small "Add Entry" if needed - keeping it as standard ghost button above table instead for this specific design) -->
+</body></html>

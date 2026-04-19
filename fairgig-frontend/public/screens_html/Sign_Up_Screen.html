@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Join FairGig - The Ethical Ledger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#9ef3d6",
+                        "primary-container": "#006b54",
+                        "on-error": "#ffffff",
+                        "on-surface": "#181d1b",
+                        "surface-variant": "#dfe3e1",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#016b54",
+                        "background": "#f6faf7",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#eef2ef",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#b1ccc5",
+                        "surface-container-low": "#f0f5f2",
+                        "surface-container-highest": "#dfe3e1",
+                        "surface-container": "#ebefec",
+                        "tertiary-fixed": "#ffdcbe",
+                        "outline": "#6f7a74",
+                        "on-secondary-container": "#4e6862",
+                        "on-tertiary-fixed": "#2d1600",
+                        "on-secondary-fixed": "#06201b",
+                        "on-tertiary-container": "#ffd0a4",
+                        "inverse-surface": "#2d3130",
+                        "primary-fixed-dim": "#82d7ba",
+                        "on-tertiary-fixed-variant": "#6a3c00",
+                        "on-primary-fixed-variant": "#00513f",
+                        "secondary": "#4a635d",
+                        "outline-variant": "#bec9c3",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "primary": "#00513f",
+                        "tertiary": "#6a3c00",
+                        "on-secondary-fixed-variant": "#334b46",
+                        "inverse-primary": "#82d7ba",
+                        "tertiary-fixed-dim": "#ffb871",
+                        "on-primary-container": "#94e8cb",
+                        "tertiary-container": "#8b5000",
+                        "secondary-container": "#cae6de",
+                        "on-surface-variant": "#3e4944",
+                        "on-background": "#181d1b",
+                        "surface-dim": "#d7dbd8",
+                        "on-primary-fixed": "#002118",
+                        "secondary-fixed": "#cde8e1",
+                        "surface": "#f6faf7",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e5e9e6",
+                        "surface-bright": "#f6faf7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .urdu-text {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            line-height: 1.5;
+        }
+        body {
+            background-color: #f6faf7;
+            font-family: 'Inter', sans-serif;
+            color: #181d1b;
+        }
+        .glass-header {
+            background: rgba(246, 250, 247, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        input:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="min-h-screen flex flex-col md:flex-row">
+<div class="hidden md:flex md:w-1/3 lg:w-2/5 relative bg-primary overflow-hidden items-center justify-center p-12">
+<div class="absolute inset-0 opacity-20">
+<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-primary-fixed-dim blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-primary-container blur-[120px]"></div>
+</div>
+<div class="relative z-10 max-w-md">
+<div class="mb-12">
+<span class="text-primary-fixed font-headline font-extrabold text-3xl tracking-tighter">FairGig</span>
+</div>
+<h1 class="text-4xl lg:text-5xl font-headline font-extrabold text-white leading-tight mb-6">
+                    The Ethical Ledger for Global Labor.
+                </h1>
+<p class="text-primary-fixed/80 text-lg font-body leading-relaxed mb-8">
+                    Join a transparent ecosystem where every hour is accounted for and every worker is valued. Secure your earnings on a ledger that cannot be altered.
+                </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary-fixed">verified</span>
+</div>
+<div>
+<h3 class="text-white font-semibold">Verified Identity</h3>
+<p class="text-primary-fixed/60 text-sm">Blockchain-backed credentials for every participant.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary-fixed">account_balance_wallet</span>
+</div>
+<div>
+<h3 class="text-white font-semibold">Instant Settlement</h3>
+<p class="text-primary-fixed/60 text-sm">Direct, transparent payment flows without middlemen.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-12 left-12 right-12">
+<div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full w-1/4 bg-primary-fixed"></div>
+</div>
+<div class="mt-4 flex justify-between text-xs font-label uppercase tracking-widest text-primary-fixed/40">
+<span>Registration</span>
+<span>Step 01 of 04</span>
+</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-center px-6 py-12 lg:px-24 bg-surface">
+<div class="max-w-xl mx-auto w-full">
+<div class="md:hidden mb-8">
+<span class="text-primary font-headline font-extrabold text-2xl tracking-tighter">FairGig</span>
+</div>
+<div class="mb-10">
+<h2 class="text-3xl font-headline font-extrabold text-on-surface tracking-tight mb-2">Create your account</h2>
+<p class="text-on-surface-variant font-body">Already have an account? <a class="text-primary font-semibold hover:underline" href="#">Log in</a></p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 gap-6">
+<div>
+<label class="block text-sm font-label font-semibold text-on-surface mb-2">Full Name</label>
+<input class="w-full px-4 py-3 bg-surface-container-low border-none rounded-xl focus:bg-surface-container-lowest focus:ring-0 transition-all text-on-surface placeholder:text-outline-variant" placeholder="Enter your legal name" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-label font-semibold text-on-surface mb-2">Email Address</label>
+<input class="w-full px-4 py-3 bg-surface-container-low border-none rounded-xl focus:bg-surface-container-lowest focus:ring-0 transition-all text-on-surface placeholder:text-outline-variant" placeholder="name@company.com" type="email"/>
+</div>
+</div>
+<div class="py-4">
+<label class="block text-sm font-label font-semibold text-on-surface mb-4">Choose Your Role</label>
+<div class="grid grid-cols-3 gap-3">
+<label class="relative flex flex-col items-center justify-center p-4 border-2 border-transparent bg-surface-container-low rounded-2xl cursor-pointer hover:bg-surface-container transition-all group has-[:checked]:bg-primary-container has-[:checked]:text-white">
+<input checked="" class="sr-only" name="role" type="radio" value="Worker"/>
+<span class="material-symbols-outlined mb-2 group-has-[:checked]:text-primary-fixed">engineering</span>
+<span class="text-xs font-semibold uppercase tracking-wider">Worker</span>
+</label>
+<label class="relative flex flex-col items-center justify-center p-4 border-2 border-transparent bg-surface-container-low rounded-2xl cursor-pointer hover:bg-surface-container transition-all group has-[:checked]:bg-primary-container has-[:checked]:text-white">
+<input class="sr-only" name="role" type="radio" value="Verifier"/>
+<span class="material-symbols-outlined mb-2 group-has-[:checked]:text-primary-fixed">verified_user</span>
+<span class="text-xs font-semibold uppercase tracking-wider">Verifier</span>
+</label>
+<label class="relative flex flex-col items-center justify-center p-4 border-2 border-transparent bg-surface-container-low rounded-2xl cursor-pointer hover:bg-surface-container transition-all group has-[:checked]:bg-primary-container has-[:checked]:text-white">
+<input class="sr-only" name="role" type="radio" value="Advocate"/>
+<span class="material-symbols-outlined mb-2 group-has-[:checked]:text-primary-fixed">campaign</span>
+<span class="text-xs font-semibold uppercase tracking-wider">Advocate</span>
+</label>
+</div>
+</div>
+<div class="space-y-6" id="worker-fields">
+<div>
+<label class="block text-sm font-label font-semibold text-on-surface mb-2">Phone Number</label>
+<div class="flex gap-2">
+<div class="w-24 px-4 py-3 bg-surface-container-low rounded-xl flex items-center justify-center text-sm font-semibold text-on-surface-variant">
+                                    +1
+                                </div>
+<input class="flex-1 px-4 py-3 bg-surface-container-low border-none rounded-xl focus:bg-surface-container-lowest focus:ring-0 transition-all text-on-surface placeholder:text-outline-variant" placeholder="(555) 000-0000" type="tel"/>
+</div>
+<p class="mt-2 text-xs text-on-surface-variant italic">Required for secure ledger verification</p>
+</div>
+</div>
+<div>
+<label class="block text-sm font-label font-semibold text-on-surface mb-2">Password</label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-low border-none rounded-xl focus:bg-surface-container-lowest focus:ring-0 transition-all text-on-surface placeholder:text-outline-variant" placeholder="Create a secure password" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+</div>
+</div>
+<div class="space-y-4 pt-4">
+<label class="flex items-start gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="w-6 h-6 rounded-lg bg-surface-container-low peer-checked:bg-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg scale-0 peer-checked:scale-100 transition-transform" style="font-variation-settings: 'wght' 700">check</span>
+</div>
+</div>
+<div class="flex-1">
+<span class="text-sm font-medium text-on-surface">Verify Email Address</span>
+<p class="text-xs text-on-surface-variant">A secure link will be sent to confirm your identity.</p>
+</div>
+</label>
+<label class="flex items-start gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center">
+<input class="peer sr-only" type="checkbox"/>
+<div class="w-6 h-6 rounded-lg bg-surface-container-low peer-checked:bg-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg scale-0 peer-checked:scale-100 transition-transform" style="font-variation-settings: 'wght' 700">check</span>
+</div>
+</div>
+<span class="text-sm font-medium text-on-surface">I accept the <a class="text-primary hover:underline" href="#">Terms of Service</a> and <a class="text-primary hover:underline" href="#">Privacy Policy</a></span>
+</label>
+</div>
+<div class="pt-6">
+<button class="w-full bg-primary hover:bg-primary-container text-white font-headline font-bold py-4 rounded-xl shadow-lg shadow-primary/10 transition-all active:scale-[0.98]" type="submit">
+                            Create Account
+                        </button>
+</div>
+<div class="flex items-center gap-4 py-4">
+<div class="h-px flex-1 bg-surface-container-high"></div>
+<span class="text-xs font-label uppercase tracking-widest text-outline-variant">Or sign up with</span>
+<div class="h-px flex-1 bg-surface-container-high"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-3 px-4 bg-surface-container-lowest border border-outline-variant/20 rounded-xl hover:bg-surface-container-low transition-all font-semibold text-sm" type="button">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Official Google brand logo with its characteristic multicolor G on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBosXbPtD_-yVO648xRIkSF0H585CXPnIl-22PP__Ki_mN--Fx9bHAtrNEWZcqtVKwCnlPiFyemNhCBV7Os_K_HWdY3xvk3rpdzjBxKV2mE9tChoEH64dWxzNu2Yzn-P8lcSDBLMJ_3c-Okxo7by-DZGid6ffLXdIApr7DdMDdi4q_Q14ucXHCG1XOX3xz30GGRC6Ongzaxn4_v2id6HqstxMU6p4uY4fyOCPndqjcazPoIOBfDXYTIMs7WC7ix92LOJFS65tl6teJu"/>
+                            Google
+                        </button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 bg-surface-container-lowest border border-outline-variant/20 rounded-xl hover:bg-surface-container-low transition-all font-semibold text-sm" type="button">
+<span class="material-symbols-outlined text-on-surface" style="font-variation-settings: 'FILL' 1">terminal</span>
+                            Web3 Auth
+                        </button>
+</div>
+</form>
+<div class="mt-12 p-6 bg-tertiary-fixed rounded-2xl flex items-center gap-4">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant">info</span>
+<p class="text-sm font-medium text-on-tertiary-fixed-variant">
+                        FairGig uses advanced cryptographic ledgers. Your data is encrypted and only shared with your explicit consent.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</body></html>

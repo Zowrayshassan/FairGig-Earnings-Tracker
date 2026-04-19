@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Ethical Ledger | Commission Trends</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f0f5f2",
+                    "primary": "#00513f",
+                    "outline": "#6f7a74",
+                    "surface-bright": "#f6faf7",
+                    "surface-dim": "#d7dbd8",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#bec9c3",
+                    "on-surface-variant": "#3e4944",
+                    "surface-container-high": "#e5e9e6",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#2d3130",
+                    "secondary-container": "#cae6de",
+                    "tertiary-fixed-dim": "#ffb871",
+                    "on-tertiary-fixed-variant": "#6a3c00",
+                    "on-surface": "#181d1b",
+                    "on-primary-fixed": "#002118",
+                    "secondary-fixed-dim": "#b1ccc5",
+                    "tertiary-fixed": "#ffdcbe",
+                    "on-tertiary-fixed": "#2d1600",
+                    "inverse-primary": "#82d7ba",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#6a3c00",
+                    "tertiary-container": "#8b5000",
+                    "on-primary-fixed-variant": "#00513f",
+                    "secondary": "#4a635d",
+                    "on-secondary-container": "#4e6862",
+                    "inverse-on-surface": "#eef2ef",
+                    "on-primary-container": "#94e8cb",
+                    "surface-container": "#ebefec",
+                    "surface-variant": "#dfe3e1",
+                    "surface-tint": "#016b54",
+                    "background": "#f6faf7",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#82d7ba",
+                    "primary-container": "#006b54",
+                    "on-secondary-fixed": "#06201b",
+                    "surface-container-highest": "#dfe3e1",
+                    "on-tertiary-container": "#ffd0a4",
+                    "on-error": "#ffffff",
+                    "surface": "#f6faf7",
+                    "on-secondary-fixed-variant": "#334b46",
+                    "on-primary": "#ffffff",
+                    "on-background": "#181d1b",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#cde8e1",
+                    "primary-fixed": "#9ef3d6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 bottom-0 w-72 h-screen z-50 bg-white dark:bg-[#0a0f0d] flex flex-col h-full p-6 border-r border-[#f0f5f2] dark:border-[#1a211e] shadow-[4px_0px_20px_rgba(0,0,0,0.02)] font-['Plus_Jakarta_Sans'] text-sm font-medium">
+<div class="flex items-center gap-3 mb-10">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">balance</span>
+</div>
+<div>
+<h1 class="text-xl font-extrabold tracking-tighter text-emerald-900 dark:text-emerald-50">The Ethical Ledger</h1>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Advocate Global Oversight</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 text-emerald-700/70 dark:text-emerald-500/70 px-4 py-3 hover:translate-x-1 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/10 transition-all duration-300 transform ease-out-cubic duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-900 dark:text-emerald-200 rounded-xl px-4 py-3 font-semibold transition-all duration-300 transform ease-out-cubic duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span>Trends</span>
+</a>
+<a class="flex items-center gap-3 text-emerald-700/70 dark:text-emerald-500/70 px-4 py-3 hover:translate-x-1 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/10 transition-all duration-300 transform ease-out-cubic duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span>Live Map</span>
+</a>
+<a class="flex items-center gap-3 text-emerald-700/70 dark:text-emerald-500/70 px-4 py-3 hover:translate-x-1 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/10 transition-all duration-300 transform ease-out-cubic duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span>Grievances</span>
+</a>
+<a class="flex items-center gap-3 text-emerald-700/70 dark:text-emerald-500/70 px-4 py-3 hover:translate-x-1 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/10 transition-all duration-300 transform ease-out-cubic duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="crisis_alert">crisis_alert</span>
+<span>Vulnerability</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 space-y-4">
+<button class="w-full py-3 bg-primary text-white rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-transform">
+<span>Generate Report</span>
+</button>
+<div class="space-y-1">
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-2 text-xs" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help_outline">help_outline</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 text-error px-4 py-2 text-xs" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</div>
+</aside>
+<main class="ml-72 min-h-screen">
+<!-- TopNavBar Anchor -->
+<header class="sticky top-0 w-full z-40 bg-[#f6faf7]/80 backdrop-blur-xl flex justify-between items-center px-10 h-20 w-full max-w-full font-['Plus_Jakarta_Sans'] tracking-tight">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-on-surface-variant bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/10">
+<span class="material-symbols-outlined text-emerald-900" data-icon="location_on">location_on</span>
+<span class="text-sm font-semibold">London, UK</span>
+<span class="text-outline-variant">|</span>
+<span class="text-sm">Region: EMEA</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-all duration-150 active:scale-90">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-all duration-150 active:scale-90">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<div class="flex items-center gap-3 pl-4 border-l border-outline-variant/20">
+<div class="text-right">
+<p class="text-sm font-bold text-emerald-950">Advocate Profile</p>
+<p class="text-[10px] text-on-surface-variant">ID: AD-49201</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden">
+<img alt="Advocate Profile" class="w-full h-full object-cover" data-alt="professional portrait of a middle-aged man with short hair wearing a clean white shirt in a bright office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKyk_G9EGwzqzgbTJedReywAuNXPh4qvNIth31nJLb051M4GRU5NezkYLheMXvW7hBx9DZh1uAILEWVXi_-q6EmAJmqNd9_Em3WYrACDRYMjbFW3p6fTDkFhH9DtJzBgIbDxsRMMNVyxT-z7P_zBVRYLn1ruPaAEDYR_Sp2mUrWTt_-9uGvx1zVxr0pawHEEyiQTbk6u9t520LgejerIN9pSHj35pKLF2kAHcSlEtZ6YfN65XjfrcFx_L4nKnkpnZkxpRC5lMKhp1t"/>
+</div>
+</div>
+</div>
+</header>
+<div class="p-10 max-w-7xl mx-auto">
+<!-- Header Editorial Section -->
+<section class="mb-12">
+<h2 class="text-5xl font-extrabold text-primary tracking-tight mb-4">Commission Trends</h2>
+<p class="text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    Analyzing historical commission variance across major platforms. Use this ledger to identify predatory spikes and cross-regional pricing disparities.
+                </p>
+</section>
+<!-- Filters & Interactive Controls -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-8 items-end">
+<div class="md:col-span-4">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Platform Selection</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 bg-primary text-white rounded-xl text-sm font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-white"></span> Uber
+                        </button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface rounded-xl text-sm font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#0066cc]"></span> Careem
+                        </button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface rounded-xl text-sm font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#f1f1f1] border border-outline"></span> Bolt
+                        </button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface rounded-xl text-sm font-semibold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Deliveroo
+                        </button>
+</div>
+</div>
+<div class="md:col-span-3">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Timeframe</label>
+<div class="bg-surface-container-low rounded-xl p-1 flex">
+<button class="flex-1 py-1.5 text-xs font-bold bg-white rounded-lg shadow-sm">1M</button>
+<button class="flex-1 py-1.5 text-xs font-bold text-on-surface-variant">3M</button>
+<button class="flex-1 py-1.5 text-xs font-bold text-on-surface-variant">6M</button>
+<button class="flex-1 py-1.5 text-xs font-bold text-on-surface-variant">1Y</button>
+</div>
+</div>
+<div class="md:col-span-3">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Location Filter</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl pl-10 py-2 text-sm focus:ring-2 focus:ring-primary" placeholder="London Central" type="text"/>
+</div>
+</div>
+<div class="md:col-span-2 flex justify-end gap-2">
+<button class="p-2.5 bg-surface-container-lowest rounded-xl border border-outline-variant/30 hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined" data-icon="zoom_in">zoom_in</span>
+</button>
+<button class="p-2.5 bg-surface-container-lowest rounded-xl border border-outline-variant/30 hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<!-- Main Chart Card -->
+<div class="lg:col-span-3 bg-white rounded-3xl p-8 shadow-[0_32px_64px_-12px_rgba(0,0,0,0.04)] relative overflow-hidden group">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="text-2xl font-bold text-emerald-950">Market Variance Chart</h3>
+<p class="text-sm text-on-surface-variant">Weighted average of commission rates (%) across selected platforms</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-xs font-bold text-on-surface-variant">Uber</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="text-xs font-bold text-on-surface-variant">Careem</span>
+</div>
+</div>
+</div>
+<!-- Abstract Chart Representation -->
+<div class="relative h-[400px] w-full flex items-end justify-between px-4">
+<div class="absolute inset-0 grid grid-rows-5 grid-cols-1 pointer-events-none">
+<div class="border-b border-surface-container-low"></div>
+<div class="border-b border-surface-container-low"></div>
+<div class="border-b border-surface-container-low"></div>
+<div class="border-b border-surface-container-low"></div>
+<div class="border-b border-surface-container-low"></div>
+</div>
+<!-- Data Lines via SVG -->
+<svg class="absolute inset-0 w-full h-full px-4 pt-10" fill="none" viewbox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+<!-- Uber Line -->
+<path d="M0 150C50 140 100 180 150 160C200 140 250 80 300 100C350 120 400 190 450 170C500 150 550 130 600 140C650 150 700 110 750 105C800 100 850 100 900 100" stroke="#00513f" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+<!-- Careem Line -->
+<path d="M0 120C50 130 100 110 150 130C200 150 250 160 300 140C350 120 400 110 450 130C500 150 550 170 600 160C650 150 700 140 750 145C800 150 850 150 900 150" stroke="#cae6de" stroke-dasharray="8 8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+<!-- Interactive Tooltip Simulation -->
+<circle class="shadow-lg" cx="300" cy="100" fill="#00513f" r="6"></circle>
+</svg>
+<!-- X-Axis Labels -->
+<div class="absolute bottom-0 w-full flex justify-between text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter px-4 pb-2">
+<span>Week 1</span>
+<span>Week 2</span>
+<span>Week 3</span>
+<span>Week 4</span>
+<span>Week 5</span>
+<span>Week 6</span>
+<span>Week 7</span>
+<span>Week 8</span>
+</div>
+<!-- Vertical Guide -->
+<div class="absolute left-[300px] top-0 bottom-0 w-px bg-primary/10 flex items-center justify-center">
+<div class="bg-white px-3 py-2 rounded-lg shadow-xl border border-surface-container-high absolute top-20 flex flex-col gap-1 -translate-x-1/2">
+<span class="text-[10px] font-bold text-on-surface-variant">MAY 14</span>
+<span class="text-sm font-extrabold text-primary">Uber: 25.4%</span>
+<span class="text-sm font-extrabold text-secondary">Careem: 22.1%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Info Panel -->
+<div class="lg:col-span-1 space-y-8">
+<!-- Key Metric Card -->
+<div class="bg-primary text-white p-6 rounded-3xl shadow-xl shadow-primary/10">
+<div class="flex justify-between items-start mb-6">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+</div>
+<span class="text-[10px] font-bold py-1 px-2 bg-primary-container/30 rounded-full">+4.2% YOY</span>
+</div>
+<h4 class="text-sm font-medium opacity-80 mb-1">Global Avg Commission</h4>
+<p class="text-4xl font-extrabold tracking-tight mb-4">24.8%</p>
+<p class="text-[10px] leading-relaxed opacity-70">
+                            Current industry average has risen 4.2% compared to the previous fiscal year in the EMEA region.
+                        </p>
+</div>
+<!-- Risk Profile Card -->
+<div class="bg-surface-container-lowest p-6 rounded-3xl border border-surface-container-high">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+<h4 class="text-sm font-bold text-emerald-950 uppercase tracking-widest">Risk Alert</h4>
+</div>
+<div class="space-y-4">
+<div class="p-3 bg-error-container/20 rounded-xl">
+<p class="text-xs font-bold text-on-error-container">Unfair Surge Pricing</p>
+<p class="text-[10px] text-on-surface-variant">Detected in London SE1. Commission spikes of 35% reported.</p>
+</div>
+<div class="p-3 bg-tertiary-fixed/20 rounded-xl">
+<p class="text-xs font-bold text-on-tertiary-fixed-variant">Fee Transparency Lag</p>
+<p class="text-[10px] text-on-surface-variant">Careem reports inconsistent base-rate disclosures this month.</p>
+</div>
+</div>
+</div>
+<!-- Platform Health -->
+<div class="bg-surface-container-low p-6 rounded-3xl">
+<h4 class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-4">Integrity Index</h4>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-[10px] font-bold mb-1">
+<span>UBER</span>
+<span>82%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[82%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[10px] font-bold mb-1">
+<span>CAREEM</span>
+<span>64%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[64%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Regional Breakdown Table (Editorial Style) -->
+<section class="mt-12 bg-white rounded-3xl p-8 shadow-sm overflow-hidden border border-surface-container">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xl font-bold text-emerald-950">Regional Variance Ledger</h3>
+<button class="text-sm font-bold text-primary flex items-center gap-2 group">
+                        View Full Data 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-surface-container-low">
+<th class="pb-4 text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant px-2">City/Region</th>
+<th class="pb-4 text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant px-2">Avg Rate</th>
+<th class="pb-4 text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant px-2">Change</th>
+<th class="pb-4 text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant px-2">Status</th>
+<th class="pb-4 text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant px-2 text-right">Trend</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-5 px-2">
+<span class="font-bold text-emerald-950">London Central</span>
+<p class="text-[10px] text-on-surface-variant">United Kingdom</p>
+</td>
+<td class="py-5 px-2 font-headline font-bold text-primary">28.4%</td>
+<td class="py-5 px-2 text-error text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span> 2.1%
+                                </td>
+<td class="py-5 px-2">
+<span class="px-3 py-1 bg-error-container text-on-error-container text-[10px] font-bold rounded-full uppercase">Flagged</span>
+</td>
+<td class="py-5 px-2 text-right">
+<div class="inline-flex items-center gap-1">
+<div class="w-1 h-3 bg-surface-container-high rounded-full"></div>
+<div class="w-1 h-4 bg-surface-container-high rounded-full"></div>
+<div class="w-1 h-2 bg-surface-container-high rounded-full"></div>
+<div class="w-1 h-5 bg-primary rounded-full"></div>
+<div class="w-1 h-6 bg-primary rounded-full"></div>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-5 px-2">
+<span class="font-bold text-emerald-950">Dubai Marina</span>
+<p class="text-[10px] text-on-surface-variant">UAE</p>
+</td>
+<td class="py-5 px-2 font-headline font-bold text-primary">15.2%</td>
+<td class="py-5 px-2 text-primary text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="south_east">south_east</span> 0.4%
+                                </td>
+<td class="py-5 px-2">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full uppercase">Stable</span>
+</td>
+<td class="py-5 px-2 text-right">
+<div class="inline-flex items-center gap-1">
+<div class="w-1 h-5 bg-primary rounded-full"></div>
+<div class="w-1 h-4 bg-primary rounded-full"></div>
+<div class="w-1 h-3 bg-primary rounded-full"></div>
+<div class="w-1 h-3 bg-primary rounded-full"></div>
+<div class="w-1 h-2 bg-primary rounded-full"></div>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-5 px-2">
+<span class="font-bold text-emerald-950">Berlin Mitte</span>
+<p class="text-[10px] text-on-surface-variant">Germany</p>
+</td>
+<td class="py-5 px-2 font-headline font-bold text-primary">21.0%</td>
+<td class="py-5 px-2 text-on-surface-variant text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="horizontal_rule">horizontal_rule</span> 0.0%
+                                </td>
+<td class="py-5 px-2">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold rounded-full uppercase">Auditing</span>
+</td>
+<td class="py-5 px-2 text-right">
+<div class="inline-flex items-center gap-1">
+<div class="w-1 h-4 bg-surface-container-high rounded-full"></div>
+<div class="w-1 h-4 bg-surface-container-high rounded-full"></div>
+<div class="w-1 h-4 bg-primary rounded-full"></div>
+<div class="w-1 h-4 bg-primary rounded-full"></div>
+<div class="w-1 h-4 bg-primary rounded-full"></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+<!-- Contextual FAB - Suppression on details pages but kept here as it's an analytical dashboard -->
+<button class="fixed bottom-10 right-10 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl shadow-primary/40 hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-3xl" data-icon="add_chart" style="font-variation-settings: 'FILL' 1;">add_chart</span>
+</button>
+</body></html>

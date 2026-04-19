@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Worker Profile | FairGig</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#8b5000",
+                        "primary-container": "#006b54",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#ebefec",
+                        "on-primary-fixed": "#002118",
+                        "secondary-fixed": "#cde8e1",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#4e6862",
+                        "on-error-container": "#93000a",
+                        "background": "#f6faf7",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f6faf7",
+                        "primary-fixed-dim": "#82d7ba",
+                        "inverse-primary": "#82d7ba",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e5e9e6",
+                        "inverse-on-surface": "#eef2ef",
+                        "tertiary": "#6a3c00",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#6a3c00",
+                        "on-primary-fixed-variant": "#00513f",
+                        "tertiary-fixed": "#ffdcbe",
+                        "surface-tint": "#016b54",
+                        "outline-variant": "#bec9c3",
+                        "on-secondary-fixed-variant": "#334b46",
+                        "on-surface": "#181d1b",
+                        "secondary-container": "#cae6de",
+                        "outline": "#6f7a74",
+                        "on-background": "#181d1b",
+                        "surface-container-highest": "#dfe3e1",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#9ef3d6",
+                        "on-secondary-fixed": "#06201b",
+                        "secondary-fixed-dim": "#b1ccc5",
+                        "secondary": "#4a635d",
+                        "on-surface-variant": "#3e4944",
+                        "inverse-surface": "#2d3130",
+                        "surface": "#f6faf7",
+                        "on-tertiary-fixed": "#2d1600",
+                        "on-tertiary-container": "#ffd0a4",
+                        "tertiary-fixed-dim": "#ffb871",
+                        "surface-container-low": "#f0f5f2",
+                        "on-primary-container": "#94e8cb",
+                        "surface-dim": "#d7dbd8",
+                        "surface-variant": "#dfe3e1",
+                        "primary": "#00513f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f6faf7; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-emerald-50/70 dark:bg-emerald-950/70 backdrop-blur-md fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-3 w-full max-w-7xl mx-auto">
+<div class="text-xl font-extrabold text-emerald-900 dark:text-emerald-50 font-['Plus_Jakarta_Sans'] tracking-tight">FairGig</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-emerald-100/50 dark:hover:bg-emerald-800/50 transition-colors">
+<span class="material-symbols-outlined text-emerald-900 dark:text-emerald-100">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-emerald-100/50 dark:hover:bg-emerald-800/50 transition-colors">
+<span class="material-symbols-outlined text-emerald-900 dark:text-emerald-100">help_outline</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary-container overflow-hidden">
+<img alt="Worker profile avatar" class="w-full h-full object-cover" data-alt="Professional close-up portrait of a South Asian man with a warm expression and soft lighting in a corporate environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXHoDNGdbgmOOJQ9Yenb8ASzLKNvJY7qhZ7UEz8ooqD1StwefvP0B4qf6uYgrL9uX_tD_3LcIyaHwa2ujwaVdzwyG9CTYbWwSq90P1VmPzm1ZLTzc3xv6q4diIwzGuN8VXqAob-8xModcI2Z8jFtVZ8IM6jG7pIgwnpuHQB1UyMERx9Fj4sCVuwuZ_Zz0hIF-f3LqBbdgDQee_MobrM3O0PYG-E3b1eVoNjEXZxDdoAXzUhxA_xMN_Kb5nyQEsueanpqG-eqJFVMsY"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Hero Section: Identity -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                        Gold Tier
+                    </span>
+</div>
+<h1 class="text-5xl md:text-7xl font-extrabold font-headline tracking-tighter text-primary">
+                    Arjun M.
+                </h1>
+<p class="text-on-surface-variant max-w-md text-lg leading-relaxed">
+                    Dedicated fulfillment specialist since 2021. Maintaining a 4.9/5 impact score across the Veridian Ledger.
+                </p>
+</div>
+<div class="hidden md:block">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-primary-container transition-all active:scale-95">
+<span class="material-symbols-outlined">edit_square</span>
+                    Update Ledger
+                </button>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Earnings Card -->
+<div class="md:col-span-8 bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant/10 flex flex-col justify-between min-h-[320px]">
+<div>
+<h3 class="text-on-surface-variant font-bold text-sm uppercase tracking-widest mb-4">Verified Earnings Total</h3>
+<div class="flex items-baseline gap-2">
+<span class="text-sm font-bold text-primary">PKR</span>
+<span class="text-6xl md:text-8xl font-black font-headline tracking-tighter text-primary-container">1.2M</span>
+</div>
+</div>
+<div class="mt-8 bg-surface-container-low rounded-2xl p-6 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-on-surface-variant font-medium">Monthly Performance</span>
+<span class="text-xl font-bold text-on-surface">+14.2% Growth</span>
+</div>
+<!-- Sparkline Simulation -->
+<div class="flex items-end gap-1 h-12">
+<div class="w-2 h-4 bg-primary/20 rounded-full"></div>
+<div class="w-2 h-6 bg-primary/30 rounded-full"></div>
+<div class="w-2 h-8 bg-primary/40 rounded-full"></div>
+<div class="w-2 h-10 bg-primary/60 rounded-full"></div>
+<div class="w-2 h-12 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Profile Info Card -->
+<div class="md:col-span-4 bg-primary text-on-primary p-8 rounded-3xl flex flex-col justify-center gap-6 relative overflow-hidden">
+<div class="z-10">
+<h3 class="text-primary-fixed text-sm font-bold uppercase tracking-widest mb-6">Credential Vault</h3>
+<div class="space-y-6">
+<div class="space-y-1">
+<label class="text-[10px] uppercase font-bold opacity-70">Platform ID</label>
+<div class="flex items-center justify-between border-b border-primary-container pb-2">
+<span class="font-headline font-bold">FG-992834-AM</span>
+<span class="material-symbols-outlined text-sm opacity-50">verified_user</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase font-bold opacity-70">Verified Phone</label>
+<div class="flex items-center justify-between border-b border-primary-container pb-2">
+<span class="font-headline font-bold">+92 300 555 0192</span>
+<span class="material-symbols-outlined text-sm cursor-pointer hover:text-primary-fixed">edit</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase font-bold opacity-70">Tax Residency</label>
+<div class="flex items-center justify-between border-b border-primary-container pb-2">
+<span class="font-headline font-bold">Punjab, Pakistan</span>
+<span class="material-symbols-outlined text-sm opacity-50">location_on</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Abstract visual element -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-primary-container rounded-full opacity-50 blur-3xl"></div>
+</div>
+<!-- Recent Shifts Summary -->
+<div class="md:col-span-12 bg-surface-container-low p-8 rounded-3xl">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-on-surface font-headline font-extrabold text-2xl tracking-tight">Recent Shifts Summary</h3>
+<button class="text-primary font-bold text-sm flex items-center gap-2 hover:underline">
+                        View History <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Shift Item -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl hover:shadow-lg transition-shadow cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container">local_shipping</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant opacity-60">OCT 24</span>
+</div>
+<h4 class="font-bold text-on-surface group-hover:text-primary transition-colors">Prime Logistics Hub</h4>
+<p class="text-xs text-on-surface-variant mb-4">Night Shift · 8.5 Hours</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<span class="text-sm font-black text-primary">PKR 4,200</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase">Settled</span>
+</div>
+</div>
+<!-- Shift Item -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl hover:shadow-lg transition-shadow cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container">inventory_2</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant opacity-60">OCT 22</span>
+</div>
+<h4 class="font-bold text-on-surface group-hover:text-primary transition-colors">Urban Express Center</h4>
+<p class="text-xs text-on-surface-variant mb-4">Day Shift · 6 Hours</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<span class="text-sm font-black text-primary">PKR 3,100</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase">Settled</span>
+</div>
+</div>
+<!-- Shift Item -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl hover:shadow-lg transition-shadow cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container">construction</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant opacity-60">OCT 20</span>
+</div>
+<h4 class="font-bold text-on-surface group-hover:text-primary transition-colors">Skyline Assembly Plant</h4>
+<p class="text-xs text-on-surface-variant mb-4">Overtime · 10 Hours</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<span class="text-sm font-black text-primary">PKR 5,800</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase">Settled</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-xl z-50 rounded-t-3xl shadow-[0_-8px_32px_rgba(0,0,0,0.06)]">
+<button class="flex flex-col items-center justify-center text-emerald-700/50 dark:text-emerald-400/50 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-emerald-700/50 dark:text-emerald-400/50 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Earnings</span>
+</button>
+<button class="flex flex-col items-center justify-center text-emerald-700/50 dark:text-emerald-400/50 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">gavel</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Grievances</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-emerald-100 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-50 rounded-2xl px-5 py-2 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

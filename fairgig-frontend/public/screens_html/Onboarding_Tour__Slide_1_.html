@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FairGig Onboarding - Take Control</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#8b5000",
+                    "primary-container": "#006b54",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#ebefec",
+                    "on-primary-fixed": "#002118",
+                    "secondary-fixed": "#cde8e1",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#4e6862",
+                    "on-error-container": "#93000a",
+                    "background": "#f6faf7",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#f6faf7",
+                    "primary-fixed-dim": "#82d7ba",
+                    "inverse-primary": "#82d7ba",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e5e9e6",
+                    "inverse-on-surface": "#eef2ef",
+                    "tertiary": "#6a3c00",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#6a3c00",
+                    "on-primary-fixed-variant": "#00513f",
+                    "tertiary-fixed": "#ffdcbe",
+                    "surface-tint": "#016b54",
+                    "outline-variant": "#bec9c3",
+                    "on-secondary-fixed-variant": "#334b46",
+                    "on-surface": "#181d1b",
+                    "secondary-container": "#cae6de",
+                    "outline": "#6f7a74",
+                    "on-background": "#181d1b",
+                    "surface-container-highest": "#dfe3e1",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#9ef3d6",
+                    "on-secondary-fixed": "#06201b",
+                    "secondary-fixed-dim": "#b1ccc5",
+                    "secondary": "#4a635d",
+                    "on-surface-variant": "#3e4944",
+                    "inverse-surface": "#2d3130",
+                    "surface": "#f6faf7",
+                    "on-tertiary-fixed": "#2d1600",
+                    "on-tertiary-container": "#ffd0a4",
+                    "tertiary-fixed-dim": "#ffb871",
+                    "surface-container-low": "#f0f5f2",
+                    "on-primary-container": "#94e8cb",
+                    "surface-dim": "#d7dbd8",
+                    "surface-variant": "#dfe3e1",
+                    "primary": "#00513f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6faf7;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col items-center justify-center p-4">
+<!-- Onboarding Navigation Suppressed as per UX Policy (Linear/Transactional) -->
+<main class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<!-- Illustration Section with Asymmetric Layout -->
+<div class="relative group order-2 md:order-1">
+<!-- Glassmorphism Backdrop for the Image -->
+<div class="absolute -inset-4 bg-primary/5 rounded-[2rem] blur-2xl group-hover:bg-primary/10 transition-all duration-700"></div>
+<div class="relative aspect-square rounded-[2.5rem] overflow-hidden bg-surface-container-lowest shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
+<img alt="FairGig Worker Illustration" class="w-full h-full object-cover" data-alt="Modern professional worker in a clean uniform using a sleek mobile app interface to log work hours in a bright contemporary office setting with soft green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw9WwNy1H_5jMUfJ05MkXw77V4J3zsqAkj5PdM8Wum7gMmn1tDn61-JkiBVOnMwKnpD53_FsOTguTqbQqff1pI1fEz13pe3BJfnT8yge-59FPPymHx3d9WQvwCeljtRiy09ALLOtB2B2ardSdQm_cgka_hyTNE5i7inrd6NZ88KSOXHqxknMq6g7LBPum7CERSCTkzf3UHlXu3MPDXiQwvGdMINAU0pZPLq3vXIzA45DKb6DN4TwJ-mqPuB4tkfrcf2Bp_kPYeFBkb"/>
+<!-- Floating Data Badge (Editorial Layering) -->
+<div class="absolute bottom-6 right-6 bg-white/80 backdrop-blur-xl p-4 rounded-2xl shadow-lg border border-white/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-primary">Status</p>
+<p class="text-sm font-semibold text-on-surface">Shift Verified</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Section -->
+<div class="space-y-8 order-1 md:order-2 flex flex-col items-start text-left">
+<!-- Progress Indicator -->
+<div class="flex gap-2">
+<div class="h-1.5 w-8 rounded-full bg-primary"></div>
+<div class="h-1.5 w-3 rounded-full bg-outline-variant/30"></div>
+<div class="h-1.5 w-3 rounded-full bg-outline-variant/30"></div>
+</div>
+<div class="space-y-4">
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface leading-[1.1] tracking-tight">
+                    Take Control of Your Earnings
+                </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-md">
+                    Log every hour and every rupee to build a verifiable record of your labor.
+                </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-6 w-full pt-4">
+<!-- Primary Action with Subtle Gradient -->
+<button class="w-full sm:w-auto px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold text-lg shadow-xl shadow-primary/20 hover:scale-[1.03] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3">
+<span>Next</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<!-- Skip Link (Editorial Style) -->
+<button class="text-primary font-semibold hover:text-primary-container transition-colors px-4 py-2">
+                    Skip
+                </button>
+</div>
+<!-- Trust Badge / Ethical Ledger Detail -->
+<div class="pt-8 flex items-center gap-4 border-t border-outline-variant/20 w-full">
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary" data-icon="shield_with_heart" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-snug">
+                    Your data is secured in the <span class="text-primary font-bold">Veridian Ledger</span>, ensuring total transparency and fairness.
+                </p>
+</div>
+</div>
+</main>
+<!-- Contextual Floating Indicator (Non-interactive Footer Hint) -->
+<footer class="fixed bottom-10 left-1/2 -translate-x-1/2 md:hidden">
+<div class="bg-surface-container-highest/50 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.2em]">Step 1 of 3</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verifier History | FairGig Verifier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#9ef3d6",
+                    "on-secondary-container": "#4e6862",
+                    "inverse-primary": "#82d7ba",
+                    "secondary": "#4a635d",
+                    "tertiary-container": "#8b5000",
+                    "secondary-fixed": "#cde8e1",
+                    "outline-variant": "#bec9c3",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#b1ccc5",
+                    "on-primary-fixed": "#002118",
+                    "on-tertiary-fixed-variant": "#6a3c00",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#181d1b",
+                    "error": "#ba1a1a",
+                    "background": "#f6faf7",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#00513f",
+                    "primary": "#00513f",
+                    "primary-container": "#006b54",
+                    "surface-bright": "#f6faf7",
+                    "surface-tint": "#016b54",
+                    "primary-fixed-dim": "#82d7ba",
+                    "tertiary-fixed-dim": "#ffb871",
+                    "outline": "#6f7a74",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ebefec",
+                    "on-tertiary-container": "#ffd0a4",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#94e8cb",
+                    "tertiary": "#6a3c00",
+                    "surface-container-high": "#e5e9e6",
+                    "surface": "#f6faf7",
+                    "on-secondary-fixed-variant": "#334b46",
+                    "inverse-on-surface": "#eef2ef",
+                    "surface-dim": "#d7dbd8",
+                    "on-secondary-fixed": "#06201b",
+                    "tertiary-fixed": "#ffdcbe",
+                    "inverse-surface": "#2d3130",
+                    "on-surface-variant": "#3e4944",
+                    "secondary-container": "#cae6de",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#dfe3e1",
+                    "surface-container-low": "#f0f5f2",
+                    "surface-container-highest": "#dfe3e1",
+                    "on-tertiary-fixed": "#2d1600",
+                    "on-background": "#181d1b"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .tonal-shift { background-image: linear-gradient(to bottom, transparent, var(--tw-bg-opacity, 1) #f0f5f2); }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r-0 bg-emerald-950 flex flex-col py-6 shadow-xl z-50">
+<div class="px-6 mb-10">
+<h1 class="text-2xl font-bold text-white tracking-tightest">FairGig Verifier</h1>
+<p class="text-emerald-400/80 text-xs mt-1 font-['Plus_Jakarta_Sans']">Verification Officer</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 text-emerald-300/70 hover:text-white px-4 py-3 mx-2 transition-colors hover:bg-emerald-800/40 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-emerald-300/70 hover:text-white px-4 py-3 mx-2 transition-colors hover:bg-emerald-800/40 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="fact_check">fact_check</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">Pending Reviews</span>
+</a>
+<!-- Active State: History -->
+<a class="flex items-center gap-3 bg-emerald-900/50 text-emerald-100 rounded-lg px-4 py-3 mx-2" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">History</span>
+</a>
+<a class="flex items-center gap-3 text-emerald-300/70 hover:text-white px-4 py-3 mx-2 transition-colors hover:bg-emerald-800/40 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-4">
+<button class="w-full py-3 px-4 bg-emerald-800/40 hover:bg-emerald-700/50 text-emerald-100 rounded-xl text-sm font-medium transition-all mb-4 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="help_center">help_center</span>
+                Help Center
+            </button>
+<a class="flex items-center gap-3 text-emerald-300/70 hover:text-white px-4 py-3 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight">Log Out</span>
+</a>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-white/70 backdrop-blur-md flex justify-between items-center px-8 h-16 border-b border-emerald-100/20">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md focus-within:ring-2 focus-within:ring-emerald-500/30 rounded-full transition-all">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-icon="search">search</span>
+<input class="w-full bg-slate-100/50 border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-0 placeholder:text-slate-500" placeholder="Search workers or review IDs..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-slate-100/50 rounded-full p-2 transition-all relative">
+<span class="material-symbols-outlined text-slate-600" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="hover:bg-slate-100/50 rounded-full p-2 transition-all">
+<span class="material-symbols-outlined text-slate-600" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-px bg-slate-200 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-xs font-bold text-emerald-900 leading-tight">Officer Sarah</p>
+<p class="text-[10px] text-slate-500">Lvl 4 Verifier</p>
+</div>
+<img alt="Verifier Avatar" class="h-10 w-10 rounded-full object-cover border-2 border-emerald-100" data-alt="professional portrait of a confident woman in a business casual outfit with soft studio lighting and a clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm-ZuAJolcNCddq2DnkR5D_pHZyK78IXDEQU1c57JEA_-lUGbYcBOJe6BY71pMBk8-akCqs8qm53a1ZvpvTOKYRruOfMWL_F4IeJ4M6fpZi3OEskbD7eud37TUnn7RxlYALlG0Qf5DUxHJiVAQaTkPpmheKxtIaRrmEHBdd659LHElzuXuXu5QXq-fIhwOl4r9Uz7UhwTB3jpl0v6j_Zi7d0lkaX8zLH6-WLOFtw-P8-ay4rMoH9PZ0uVG1Sfnsw9SErvzRnz2UzHK"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 px-8 pb-12">
+<!-- Header Section -->
+<div class="mb-8 flex justify-between items-end">
+<div>
+<h2 class="text-4xl font-extrabold text-primary tracking-tight mb-2">History</h2>
+<p class="text-on-surface-variant max-w-xl">Comprehensive ledger of all completed verification tasks. Re-open entries to adjust feedback or rectify classification errors.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-lowest border border-outline-variant/30 text-primary font-semibold rounded-xl hover:bg-surface-container transition-all shadow-sm">
+<span class="material-symbols-outlined text-xl" data-icon="file_download">file_download</span>
+                    Export to CSV
+                </button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-primary text-on-primary font-semibold rounded-xl hover:bg-primary-container transition-all shadow-md">
+<span class="material-symbols-outlined text-xl" data-icon="filter_list">filter_list</span>
+                    Filter Records
+                </button>
+</div>
+</div>
+<!-- Bento Stats Overlay -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-emerald-50/50">
+<p class="text-sm font-medium text-on-surface-variant mb-1">Total Reviews</p>
+<h3 class="text-3xl font-extrabold text-primary">1,284</h3>
+<div class="mt-4 h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-emerald-50/50">
+<p class="text-sm font-medium text-on-surface-variant mb-1">Approved</p>
+<h3 class="text-3xl font-extrabold text-emerald-600">1,102</h3>
+<div class="mt-4 h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 w-[85%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-emerald-50/50">
+<p class="text-sm font-medium text-on-surface-variant mb-1">Flagged</p>
+<h3 class="text-3xl font-extrabold text-error">156</h3>
+<div class="mt-4 h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error w-[12%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-emerald-50/50">
+<p class="text-sm font-medium text-on-surface-variant mb-1">Avg. Time</p>
+<h3 class="text-3xl font-extrabold text-on-surface">4m 12s</h3>
+<p class="text-[10px] text-emerald-600 font-bold mt-2 uppercase tracking-wider">Top 5% speed</p>
+</div>
+</div>
+<!-- History Table Section -->
+<div class="bg-surface-container-lowest rounded-3xl shadow-sm overflow-hidden border border-emerald-50/50">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50 border-b border-surface-variant/30">
+<th class="px-6 py-5 text-xs font-extrabold text-on-surface-variant uppercase tracking-widest">Date Reviewed</th>
+<th class="px-6 py-5 text-xs font-extrabold text-on-surface-variant uppercase tracking-widest">Worker</th>
+<th class="px-6 py-5 text-xs font-extrabold text-on-surface-variant uppercase tracking-widest">Result</th>
+<th class="px-6 py-5 text-xs font-extrabold text-on-surface-variant uppercase tracking-widest text-center">Verif. Time</th>
+<th class="px-6 py-5 text-xs font-extrabold text-on-surface-variant uppercase tracking-widest">Feedback/Notes</th>
+<th class="px-6 py-5 text-xs font-extrabold text-on-surface-variant uppercase tracking-widest text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant/20">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-6 py-5">
+<p class="text-sm font-semibold text-on-surface">Oct 24, 2023</p>
+<p class="text-[11px] text-on-surface-variant">02:14 PM</p>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-xs">AS</div>
+<div>
+<p class="text-sm font-semibold text-on-surface leading-none">Arshad Sharif</p>
+<p class="text-[11px] text-on-surface-variant">ID: FG-99210</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold rounded-full uppercase tracking-wide">Approved</span>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="text-sm font-medium font-headline">3m 45s</span>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm text-on-surface-variant line-clamp-1 italic">"Documentation perfectly matches government standards..."</p>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-primary-fixed/20 rounded-lg transition-all opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-6 py-5">
+<p class="text-sm font-semibold text-on-surface">Oct 24, 2023</p>
+<p class="text-[11px] text-on-surface-variant">11:05 AM</p>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold text-xs">ZK</div>
+<div>
+<p class="text-sm font-semibold text-on-surface leading-none">Zainab Khan</p>
+<p class="text-[11px] text-on-surface-variant">ID: FG-98442</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-error-container text-on-error-container text-[10px] font-bold rounded-full uppercase tracking-wide">Flagged</span>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="text-sm font-medium font-headline">8m 12s</span>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm text-on-surface-variant line-clamp-1 italic">"Blurry ID photo provided. Requested re-upload."</p>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="flex items-center gap-1 text-xs font-bold text-primary hover:underline transition-all">
+<span class="material-symbols-outlined text-base" data-icon="history_edu">history_edu</span>
+                                    Re-open Review
+                                </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-6 py-5">
+<p class="text-sm font-semibold text-on-surface">Oct 23, 2023</p>
+<p class="text-[11px] text-on-surface-variant">05:42 PM</p>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-bold text-xs">MK</div>
+<div>
+<p class="text-sm font-semibold text-on-surface leading-none">Mohammad Kasim</p>
+<p class="text-[11px] text-on-surface-variant">ID: FG-91103</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-bold rounded-full uppercase tracking-wide">Unverifiable</span>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="text-sm font-medium font-headline">12m 04s</span>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm text-on-surface-variant line-clamp-1 italic">"External references could not confirm previous employment..."</p>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="flex items-center gap-1 text-xs font-bold text-primary hover:underline transition-all">
+<span class="material-symbols-outlined text-base" data-icon="history_edu">history_edu</span>
+                                    Re-open Review
+                                </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-6 py-5">
+<p class="text-sm font-semibold text-on-surface">Oct 23, 2023</p>
+<p class="text-[11px] text-on-surface-variant">09:15 AM</p>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-xs">RJ</div>
+<div>
+<p class="text-sm font-semibold text-on-surface leading-none">Ravi Jaiswal</p>
+<p class="text-[11px] text-on-surface-variant">ID: FG-82334</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold rounded-full uppercase tracking-wide">Approved</span>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="text-sm font-medium font-headline">2m 10s</span>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm text-on-surface-variant line-clamp-1 italic">"Instant verification via partner portal successful."</p>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-primary-fixed/20 rounded-lg transition-all opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="px-6 py-4 bg-surface-container-low/30 flex items-center justify-between border-t border-surface-variant/20">
+<p class="text-sm text-on-surface-variant">Showing <span class="font-bold text-on-surface">1-4</span> of 1,284 results</p>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg hover:bg-surface-container transition-all disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center bg-primary text-on-primary rounded-lg text-sm font-bold">1</button>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container text-on-surface rounded-lg text-sm font-medium">2</button>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container text-on-surface rounded-lg text-sm font-medium">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container text-on-surface rounded-lg text-sm font-medium">321</button>
+</div>
+<button class="p-2 rounded-lg hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Feedback Summary Bento Piece -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-primary-container/10 p-8 rounded-3xl relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="text-xl font-extrabold text-primary mb-2">Quality Insight</h4>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Your approval consistency is 4.2% higher than the regional average. This indicates high precision in document evaluation.</p>
+<button class="text-primary font-bold text-sm flex items-center gap-2 hover:underline">
+                        View Detailed Metrics <span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<span class="material-symbols-outlined absolute -right-8 -bottom-8 text-[160px] text-primary/5 rotate-12 pointer-events-none" data-icon="verified">verified</span>
+</div>
+<div class="bg-surface-container-high p-8 rounded-3xl">
+<div class="flex justify-between items-start mb-6">
+<h4 class="text-xl font-extrabold text-on-surface">Urgent Recalibration</h4>
+<span class="bg-tertiary-fixed px-3 py-1 text-[10px] font-extrabold text-on-tertiary-fixed uppercase rounded-full">2 Action Items</span>
+</div>
+<div class="space-y-4">
+<div class="flex gap-4 items-start p-3 bg-surface-container-lowest rounded-2xl">
+<span class="material-symbols-outlined text-tertiary mt-1" data-icon="priority_high">priority_high</span>
+<div>
+<p class="text-sm font-bold text-on-surface">Review ID FG-98442 disputed</p>
+<p class="text-xs text-on-surface-variant">The worker provided a secondary scan of the document. Please re-evaluate within 24h.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start p-3 bg-surface-container-lowest rounded-2xl">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="update">update</span>
+<div>
+<p class="text-sm font-bold text-on-surface">Policy update for Punjab Region</p>
+<p class="text-xs text-on-surface-variant">New residence certificate formats are now accepted. Affects history from Oct 1st.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
